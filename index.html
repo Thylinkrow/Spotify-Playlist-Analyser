@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Language" content="fr"/>
+		<link rel="icon" href="./src/images/SPA_logo.png">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@645&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./src/style/style.css">
+		<script src="./src/script/excel_export.js"></script>
+		<script src="./src/script/spotify_api.js"></script>
+        <script src="./src/script/script.js"></script>
+        <title>Spotify Playlist Analyser</title>
+    </head>
+	
+    <body onload="init()">
+	
+		<aside id="spotify_form" class="form_popup">
+			<div>
+				<label for="clientId"> Client Id
+					<input id="clientId" type="text">
+				</label>
+				<label for="clientSecret"> Client Secret
+					<input id="clientSecret" type="password">
+				</label>
+				<label for="playlistId"> Playlist Id
+					<input id="playlistId" type="text">
+				</label>
+			</div>
+			<button id="spotify_form_send" class="button">Send</button>
+			<p>Get your Client Id and Secret <a href="https://developer.spotify.com/documentation/general/guides/app-settings/" target="_blank">here</a></p>
+		</aside>
+	
+        <header id="title">Spotify Playlist Analyser</header>
+        
+        <div class="controls">
+			<div class="control">
+                <input class="file-input" oninput="importInfo()" type="file" id="fileInput" accept=".json">
+			</div>
+			<div class="control">
+                <button id="requestInfo" class="button">Request from Spotify</button>
+            </div>
+            <div class="control">
+                <button id="dlExcel" class="button">Download excel</button>
+            </div>
+			<div class="control">
+                <button id="dlJson" class="button">Download json</button>
+            </div>
+        </div>
+        
+        <div id="data_display" class="contents">
+			
+			<!--<h2>Road Trip USA, by Loïc (5 followers)</h2>
+			<img src="https://i.scdn.co/image/ab67706c0000bebb2659c83b35c01d51f7e129ef" style="border-radius: 4px;" />
+			<h3>USA Trip Road</h3>
+			<p>739 songs</p>
+		
+			<div class="content">
+				<div class="sub-content">
+					<p>Under Pressure (4:8), by Queen, David Bowie</p>
+				</div>
+				<div class="sub-content-img">
+					<img class="images" src="https://i.scdn.co/image/ab67616d00004851d254ca497999ae980a5a38c5">
+				</div>
+				<div class="sub-content">
+					<p>Hot Space (2011 Remaster), 1982</p>
+				</div>
+			</div>
+			
+			<div class="content">
+				<div class="sub-content">
+					<p>Under Pressure (4:8), by Queen, David Bowie</p>
+				</div>
+				<div class="sub-content-img">
+					<img class="images" src="https://i.scdn.co/image/ab67616d00004851d254ca497999ae980a5a38c5">
+				</div>
+				<div class="sub-content">
+					<p>Hot Space (2011 Remaster), 1982</p>
+				</div>
+			</div>-->
+			
+        </div> 
+		
+		<footer id="end_title">By Loïc</footer>
+
+    </body>
+    
+</html>
